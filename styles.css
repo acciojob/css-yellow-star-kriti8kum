@@ -1,7 +1,33 @@
 /*  your css code here. If applicable */
 .star {
-        width: 100px;
-        height: 100px;
-        background-color: yellow;
-        clip-path: polygon(50% 0%, 68% 38%, 100% 44%, 76% 72%, 82% 100%, 50% 80%, 18% 100%, 24% 72%, 0% 44%, 32% 38%);
+        width: 0;
+        height: 0;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        border-bottom: 80px solid yellow;
+        position: relative;
+    }
+    .star::before {
+        content: '';
+        position: absolute;
+        top: -52px;
+        left: -32px;
+        width: 0;
+        height: 0;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        border-bottom: 80px solid yellow;
+        transform: rotate(60deg);
+    }
+    .star::after {
+        content: '';
+        position: absolute;
+        top: -52px;
+        left: 32px;
+        width: 0;
+        height: 0;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        border-bottom: 80px solid yellow;
+        transform: rotate(-60deg);
     }
